@@ -50,24 +50,24 @@
             font-weight: 800;
             letter-spacing: 0.5px;
             color: var(--color-texto-barra) !important;
-            font-family: 'Poppins', sans-serif; /* Aplicado al texto del logo */
+            font-family: 'Poppins', sans-serif; 
         }
         
         /* AJUSTE BOTONES: Flex para forzar el espacio entre Logo y Botones */
         .navbar-custom .container {
              justify-content: space-between;
-             max-width: 95%; /* Ajuste para dar aire en los bordes */
+             max-width: 95%; 
              padding-left: 0.75rem; 
              padding-right: 0.75rem; 
         }
 
         /* ESTILO DEL LOGO (IMAGEN) */
         .navbar-logo {
-            height: 60px; /* Aumentado el tamaño */
-            width: 60px;  /* Aumentado el tamaño */
+            height: 80px; 
+            width: 80px;  
             margin-right: 15px; 
             border-radius: 50%; 
-            box-shadow: none; /* ELIMINADO EL EFECTO DE LUZ/BRILLO */
+            box-shadow: none; 
             object-fit: contain; 
             background-color: transparent; 
         }
@@ -215,16 +215,20 @@
 
         /* === DISEÑO DE BANNER GRANDE (HERO) === */
         #hero-banner {
-            background-color: var(--color-barra);
-            color: var(--color-texto-barra);
-            padding: 3rem 0; 
-            margin-bottom: 3rem;
+            background-color: var(--color-barra); /* Base verde para el filtro */
+            color: var(--color-texto-barra); 
+            padding: 8rem 0; /* Aumentado el padding para hacerlo más grande */
+            margin-bottom: 6em;
             box-shadow: none; 
             border: none !important; 
             position: relative;
             overflow: hidden;
-            border-radius: 0 0 20px 20px; 
+            border-radius: 0 0 40px 40px; 
             text-align: center;
+            min-height: 600px; /* Altura mínima para asegurar que se vea bien */
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
         }
         #hero-banner::before {
             content: '';
@@ -233,22 +237,27 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('https://via.placeholder.com/1500x400/003319/ffffff?text=Fondo+Elegante+para+Banner');
+            /* IMAGEN DE FONDO (Modelo en ropa deportiva) */
+            background-image: url("baner.png");
             background-size: cover;
-            opacity: 0.3;
+            background-position: center; /* Centrado para que la modelo se vea bien */
+            opacity: 0.7; /* FILTRO VERDE OSCURO */
             z-index: 1;
         }
         #hero-content {
             position: relative;
             z-index: 2;
+            color: var(--color-texto-barra); 
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.7); /* Sombra para mejor legibilidad */
+            max-width: 90%; 
         }
         #hero-content h1 {
             font-weight: 800;
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
+            font-size: 3.5rem; 
+            margin-bottom: 0.75rem;
         }
         #hero-content p {
-            font-size: 1.25rem;
+            font-size: 1.4rem; 
             max-width: 800px;
             margin: 0 auto 1.5rem;
             font-weight: 300;
@@ -275,9 +284,9 @@
             .navbar-custom .navbar-brand {
                 font-size: 1.5rem; 
             }
-            .navbar-logo { /* Ajuste del logo en tablet */
-                height: 50px; 
-                width: 50px; 
+            .navbar-logo { 
+                height: 60px; 
+                width: 60px; 
             }
             .btn-nav-elegant {
                 min-width: 75px;
@@ -285,11 +294,15 @@
                 font-size: 0.8rem;
             }
             #hero-banner {
-                padding: 2rem 0; 
+                padding: 3rem 0; 
+                min-height: 300px; 
                 margin-bottom: 2rem;
             }
             #hero-content h1 {
-                font-size: 2rem;
+                font-size: 2.5rem; 
+            }
+            #hero-content p {
+                font-size: 1.1rem; 
             }
             .product-img {
                  height: 180px; 
@@ -319,20 +332,24 @@
             .navbar-custom .navbar-brand {
                 font-size: 1.3rem;
             }
-            .navbar-logo { /* Ajuste del logo en móvil */
-                height: 40px; 
-                width: 40px; 
+            .navbar-logo { 
+                height: 50px; 
+                width: 50px; 
             }
             .btn-nav-elegant {
                 min-width: 60px;
                 padding: 0.2rem 0.5rem;
                 font-size: 0.75rem;
             }
+            #hero-banner {
+                padding: 2.5rem 0; 
+                min-height: 250px; 
+            }
             #hero-content h1 {
-                font-size: 1.7rem;
+                font-size: 2rem; 
             }
             #hero-content p {
-                font-size: 0.9rem;
+                font-size: 1rem; 
             }
             /* AJUSTE CLAVE: 2 columnas para móviles pequeños */
             #productos.row {
@@ -391,7 +408,7 @@
         <div class="container">
             <div class="d-flex align-items-center">
                 <img src="lojo.png" 
-                     alt="FitSyle" 
+                     alt="Logo de la Tienda" 
                      class="navbar-logo">
                 
                 <span class="navbar-brand mb-0 h1">FitSyle</span>
